@@ -6,8 +6,8 @@ var flags = new Map([["AU","🇦🇺"],["CA","🇨🇦"],["CN","🇨🇳"],["DE"
 
 var body = $response.body;
 var obj = JSON.parse(body);
-var title =flags.get(obj['countryCode']) + ' '+ City_ValidCheck(obj['city']);
-var subtitle = ISP_ValidCheck(obj['org']);
+var title =flags.get(obj['countryCode'])
+var subtitle = obj['city'] + ' ' + oj['isp'];
 var ip = obj['query'];
-var description = '服务商:'+obj['isp'] + '\n'+'地区:' +City_ValidCheck(obj['regionName'])+ '\n' + 'IP:'+ obj['query'] + '\n' +'时区:'+ obj['timezone'];
+var description = "国家" + ":" + obj['country'] + '\n' + "城市" + ":" + obj['city'] + '\n' + "运营商" + ":" + obj['isp'] + '\n' + "数据中心" + ":" + obj['org'];
 $done({title, subtitle, ip, description});
