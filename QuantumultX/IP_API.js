@@ -2,7 +2,7 @@ if ($response.statusCode != 200) {
   $done(null);
 }
 
-const emojis= []
+const emojis= [ ]
 var city0 = "高谭市";
 var isp0 = " ";
 function getRandomInt(max) {
@@ -15,7 +15,7 @@ function City_ValidCheck(para) {
   } else
   {
   return city0
-//emojis[getRandomInt()]
+//emojis[getRandomInt( )]
   }
 }
 
@@ -25,7 +25,7 @@ function ISP_ValidCheck(para) {
   } else
   {
   return isp0
-//emojis[getRandomInt()]
+//emojis[getRandomInt( )]
   }
 }
 
